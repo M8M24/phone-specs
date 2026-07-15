@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">phone-specs</string>
+    <string name="title_activity_main">phone-specs</string>
+    <string name="package_name">com.musa.phonespecs</string>
+    <string name="custom_url_scheme">com.musa.phonespecs</string>
+</resources>

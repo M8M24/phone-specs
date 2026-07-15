@@ -18,11 +18,11 @@ export default function HomePage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 py-8 px-4">
+    <div className="min-h-screen bg-bg py-8 px-4">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Phone Specs</h1>
-          <p className="text-gray-600 dark:text-gray-400">Compare specifications, prices, and features</p>
+          <h1 className="text-4xl font-bold text-fg mb-2">Phone Specs</h1>
+          <p className="text-muted">Compare specifications, prices, and features</p>
         </header>
 
         <div className="mb-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
@@ -32,14 +32,14 @@ export default function HomePage() {
               placeholder="Search phones..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="neu-input"
             />
           </div>
           <div className="flex-1 max-w-xs">
             <select
               value={selectedBrand}
               onChange={(e) => setSelectedBrand(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="neu-select"
             >
               <option value="all">All Brands</option>
               {brands.map((brand) => (
@@ -47,7 +47,7 @@ export default function HomePage() {
               ))}
             </select>
           </div>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
+          <div className="text-sm text-muted">
             {filteredPhones.length} of {phones.length} phones
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
 
         {filteredPhones.length === 0 && (
-          <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+          <div className="text-center py-12 text-muted">
             No phones found matching your criteria.
           </div>
         )}

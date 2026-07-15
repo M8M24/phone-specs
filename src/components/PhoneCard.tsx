@@ -7,6 +7,26 @@ interface Props {
   phone: PhoneSpecs;
 }
 
+function MiniScore({ label, score, color }: { label: string; score: number; color: string }) {
+  const colors: Record<string, string> = {
+    purple: "bg-purple-500",
+    blue: "bg-blue-500",
+    green: "bg-green-500",
+    yellow: "bg-yellow-500",
+    red: "bg-red-500",
+    orange: "bg-orange-500",
+  };
+  return (
+    <div className="flex items-center gap-1.5" title={`${label}: ${score}/100`}>
+      <span className="text-xs text-gray-500 dark:text-gray-400">{label}</span>
+      <div className="w-16 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className={`${colors[color] || colors.blue} h-full rounded-full`} style={{ width: `${score}%` }}></div>
+      </div>
+      <span className="text-xs font-bold text-gray-900 dark:text-white w-8 text-right">{score}</span>
+    </div>
+  );
+}
+
 export default function PhoneCard({ phone }: Props) {
   const startingPrice = phone.price.launch.usd;
   const displaySizes = phone.memory.storage.join(", ");
@@ -53,6 +73,16 @@ export default function PhoneCard({ phone }: Props) {
             <p className="font-medium text-gray-900 dark:text-white">{phone.camera.rear[0].mp} MP</p>
           </div>
         </div>
+
+        {phone.scores && (
+          <div className="mb-4 pt-3 border-t border-gray-200 dark:border-gray-700 space-y-1.5">
+            <MiniScore label="Overall" score={phone.scores.overall || 0} color="purple" />
+            <MiniScore label="Perf" score={phone.scores.performance || 0} color="blue" />
+            <MiniScore label="Camera" score={phone.scores.camera || 0} color="green" />
+            <MiniScore label="Battery" score={phone.scores.battery || 0} color="red" />
+            <MiniScore label="Gaming" score={phone.scores.gaming || 0} color="orange" />
+          </div>
+        )}
 
         <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-700">
           <span className="font-bold text-lg text-gray-900 dark:text-white">${startingPrice.toLocaleString()}</span>

@@ -75,6 +75,21 @@ export interface PhoneSpecs {
     launch: { usd: number; eur: number; gbp: number };
     current?: { usd: number; eur: number; gbp: number };
   };
+  scores?: {
+    overall?: number;
+    performance?: number;
+    camera?: number;
+    battery?: number;
+    display?: number;
+    gaming?: number;
+  };
+  sources?: {
+    nanoreview?: string;
+    gsmarena?: string;
+    official?: string;
+    notebookcheck?: string;
+    other?: string[];
+  };
 }
 
 export const phones: PhoneSpecs[] = [
@@ -120,6 +135,19 @@ export const phones: PhoneSpecs[] = [
     connectivity: { network: ["5G (sub-6 GHz)", "5G mmWave (US)"], wifi: "Wi-Fi 6E", bluetooth: "5.3", nfc: true, usb: "USB-C 3.2 Gen 2 (10 Gbps)", audioJack: false },
     features: { biometrics: ["Face ID"], sensors: ["LiDAR Scanner", "Accelerometer", "Gyroscope", "Proximity", "Ambient light", "Barometer"], colors: ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"] },
     price: { launch: { usd: 1199, eur: 1329, gbp: 1199 }, current: { usd: 1199, eur: 1329, gbp: 1199 } },
+    scores: {
+      overall: 92,
+      performance: 95,
+      camera: 93,
+      battery: 88,
+      display: 94,
+      gaming: 96,
+    },
+    sources: {
+      nanoreview: "https://nanoreview.net/en/phone/apple-iphone-15-pro-max",
+      gsmarena: "https://www.gsmarena.com/apple_iphone_15_pro_max-12673.php",
+      official: "https://www.apple.com/iphone-15-pro/",
+    },
   },
   {
     id: "galaxy-s24-ultra",
@@ -164,6 +192,19 @@ export const phones: PhoneSpecs[] = [
     connectivity: { network: ["5G (sub-6)", "5G mmWave"], wifi: "Wi-Fi 7", bluetooth: "5.3", nfc: true, usb: "USB-C 3.2 Gen 1", audioJack: false },
     features: { biometrics: ["Ultrasonic fingerprint", "Face recognition"], sensors: ["Accelerometer", "Gyroscope", "Barometer", "Compass", "Proximity", "Light"], colors: ["Titanium Gray", "Titanium Black", "Titanium Violet", "Titanium Yellow"] },
     price: { launch: { usd: 1299, eur: 1449, gbp: 1249 }, current: { usd: 1299, eur: 1449, gbp: 1249 } },
+    scores: {
+      overall: 94,
+      performance: 96,
+      camera: 95,
+      battery: 92,
+      display: 95,
+      gaming: 97,
+    },
+    sources: {
+      nanoreview: "https://nanoreview.net/en/phone/samsung-galaxy-s24-ultra",
+      gsmarena: "https://www.gsmarena.com/samsung_galaxy_s24_ultra-13177.php",
+      official: "https://www.samsung.com/us/smartphones/galaxy-s24-ultra/",
+    },
   },
   {
     id: "pixel-8-pro",
@@ -207,6 +248,19 @@ export const phones: PhoneSpecs[] = [
     connectivity: { network: ["5G (sub-6)", "5G mmWave"], wifi: "Wi-Fi 7", bluetooth: "5.3", nfc: true, usb: "USB-C 3.2 Gen 2", audioJack: false },
     features: { biometrics: ["Fingerprint (under display)", "Face unlock"], sensors: ["Accelerometer", "Gyroscope", "Proximity", "Ambient light", "Barometer", "Temperature sensor"], colors: ["Obsidian", "Porcelain", "Bay"] },
     price: { launch: { usd: 999, eur: 1099, gbp: 999 }, current: { usd: 999, eur: 1099, gbp: 999 } },
+    scores: {
+      overall: 89,
+      performance: 82,
+      camera: 94,
+      battery: 87,
+      display: 91,
+      gaming: 78,
+    },
+    sources: {
+      nanoreview: "https://nanoreview.net/en/phone/google-pixel-8-pro",
+      gsmarena: "https://www.gsmarena.com/google_pixel_8_pro-12917.php",
+      official: "https://store.google.com/product/pixel_8_pro",
+    },
   },
   {
     id: "oneplus-12",
@@ -250,6 +304,19 @@ export const phones: PhoneSpecs[] = [
     connectivity: { network: ["5G (sub-6)", "5G mmWave"], wifi: "Wi-Fi 7", bluetooth: "5.4", nfc: true, usb: "USB-C 3.2 Gen 1", audioJack: false },
     features: { biometrics: ["Fingerprint (optical)", "Face unlock"], sensors: ["Accelerometer", "Gyroscope", "Proximity", "Compass", "Color spectrum"], colors: ["Fluent Emerald", "Silky Black"] },
     price: { launch: { usd: 799, eur: 899, gbp: 849 }, current: { usd: 799, eur: 899, gbp: 849 } },
+    scores: {
+      overall: 90,
+      performance: 96,
+      camera: 85,
+      battery: 93,
+      display: 92,
+      gaming: 95,
+    },
+    sources: {
+      nanoreview: "https://nanoreview.net/en/phone/oneplus-12",
+      gsmarena: "https://www.gsmarena.com/oneplus_12-13187.php",
+      official: "https://www.oneplus.com/12",
+    },
   },
   {
     id: "xiaomi-14-ultra",
@@ -294,6 +361,19 @@ export const phones: PhoneSpecs[] = [
     connectivity: { network: ["5G (sub-6)", "5G mmWave"], wifi: "Wi-Fi 7", bluetooth: "5.4", nfc: true, usb: "USB-C 3.2 Gen 1", audioJack: false },
     features: { biometrics: ["Fingerprint (ultrasonic)", "Face unlock"], sensors: ["Accelerometer", "Gyroscope", "Proximity", "Compass", "Color spectrum", "IR blaster"], colors: ["Black", "White", "Titanium Gray"] },
     price: { launch: { usd: 1299, eur: 1499, gbp: 1299 }, current: { usd: 1299, eur: 1499, gbp: 1299 } },
+    scores: {
+      overall: 91,
+      performance: 96,
+      camera: 95,
+      battery: 90,
+      display: 93,
+      gaming: 95,
+    },
+    sources: {
+      nanoreview: "https://nanoreview.net/en/phone/xiaomi-14-ultra",
+      gsmarena: "https://www.gsmarena.com/xiaomi_14_ultra-13189.php",
+      official: "https://www.mi.com/global/product/xiaomi-14-ultra/",
+    },
   },
 ];
 
